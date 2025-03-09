@@ -1,0 +1,126 @@
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 3fr 3fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "aside header header header"
+      "aside main main section"
+      "footer footer footer footer";
+    height: 100vh;
+    background-color: cornflowerblue;
+    gap: 10px;
+  }
+
+
+  .container > * {
+    border: 1px solid #000; 
+    border-radius: 10px;
+    padding: 30px;
+    background-color: lightcyan;
+  }
+ 
+  .item-a { grid-area: header; }
+  .item-b { grid-area: main; }
+  .item-c { grid-area: section; }
+  .item-d { grid-area: footer; }
+  
+  .item-e { 
+    grid-area: aside; 
+    display: flex;
+    justify-content: flex-start; 
+    flex-direction: column; 
+    align-items: flex-start; 
+    padding: 20px;
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center; 
+  }
+ 
+  .header-content img {
+    max-width: 25%;
+    height: auto;
+    margin-right: 20px;
+  }
+  
+  h1, p {
+    margin: 0;
+  }
+
+  .button {
+    background-color: cornflowerblue;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+  }
+
+  .button:hover {
+    background-color: #ffb3e3;
+  }
+
+  .item-e > nav > h2 {
+    text-align:center;
+  }
+
+  .floater {
+    float: left;
+    padding: 2px 30px 30px 30px;
+  }
+
+  .content-section {
+    display: none;
+  }
+
+  .active {
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+    }
+    .item-e, .item-a, .item-b, .item-c, .item-d {
+      width: 100%;
+    }
+    .item-e { 
+      align-items: center;
+      order: 1;
+    }
+    .item-a { 
+      order: 2;
+    }
+    .item-b { 
+      order: 3;
+    }
+    .item-c { 
+      order: 4;
+    }
+    .item-d { 
+      order: 5;
+    }
+    .button {
+      width: 100%;
+      text-align: center;
+    }
+    .header-content {
+      flex-direction: column;
+      text-align: center;
+    }
+    .header-content img {
+      max-width: 50%;
+      margin-bottom: 10px;
+    }
+    iframe {
+      max-width: 100%;
+    }
+  }
