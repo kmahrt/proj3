@@ -1,4 +1,4 @@
-
+/* no changes needed */
 .container {
     display: grid;
     grid-template-columns: 1fr 3fr 3fr 3fr;
@@ -82,45 +82,43 @@
   .active {
     display: block;
   }
-
   @media (max-width: 768px) {
     .container {
       display: flex;
       flex-direction: column;
       height: auto;
+      grid-template-areas: 
+      "aside header header header"
+      "aside main main"
+      "section"
+      "footer footer footer footer";
     }
-    .item-e, .item-a, .item-b, .item-c, .item-d {
+  
+    
+    .item-a { order: 1; }
+    .item-b { order: 2; } 
+    .item-c { order: 3; } 
+    .item-e { order: 4; } 
+    .item-d { order: 5; } 
+  
+   
+    .item-a, .item-b, .item-c, .item-d, .item-e {
       width: 100%;
     }
-    .item-e { 
-      align-items: center;
-      order: 1;
-    }
-    .item-a { 
-      order: 2;
-    }
-    .item-b { 
-      order: 3;
-    }
-    .item-c { 
-      order: 4;
-    }
-    .item-d { 
-      order: 5;
-    }
-    .button {
-      width: 100%;
-      text-align: center;
-    }
+  
+ 
     .header-content {
       flex-direction: column;
       text-align: center;
     }
+  
     .header-content img {
       max-width: 50%;
       margin-bottom: 10px;
     }
+  
     iframe {
       max-width: 100%;
     }
   }
+  

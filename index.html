@@ -1,3 +1,11 @@
+<!-- DISCLAIMER HEADER
+ I, Kat Mahrt, have written this code myself. 
+
+ CS 2550, Rita Kuo, UVU
+
+-->
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,10 +13,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
 </head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <body>
   <div class="container">
     <aside class="item-e">
       <nav>
+
         <h2>Menu</h2>
         <ul class="nav-pills">   
           <button class="button" onclick="showSection('main')">
@@ -20,6 +31,10 @@
           <button class="button" onclick="showSection('bestThrillers')">
             <i class="fa-solid fa-envelope"></i> Best of Thrillers
           </button>
+          <button class="button" onclick="toggleTheme()">
+            <i class="fa-solid fa-moon"></i> Toggle Dark Mode
+          </button>
+          
         </ul>
       </nav>
     </aside>
