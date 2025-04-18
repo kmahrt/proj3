@@ -1,12 +1,7 @@
-/* CHANGES MADE
-1. Font
-2. Dark Mode/Colors
-3. Background images for each pane
-4. Menu is now on the right
-5. changed background color 
-6. Changed font color
-7. Mobile view order is different than light view (regarding panes)
-*/
+html, body {
+  background-color: #121212;
+
+}
 body {
     
     background-color: #121212;
@@ -81,7 +76,7 @@ a:hover {
     color: #80c1ff;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     .container {
       display: flex;
       flex-direction: column;
