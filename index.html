@@ -129,43 +129,43 @@ Reflection (1-2 paragraphs):
       <form id="infoForm" novalidate method="GET" action="https://wp.zybooks.com/form-viewer.php">
         <div class="form-group">
           <label for="first-name">First Name</label>
-          <input type="text" id="first-name" name="first-name" placeholder="Enter your first name">
-          <div class="errorMsg"></div>
+          <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required>
+          <div class="errorMsg" id="first-name-error"></div>
         </div>
         <div class="form-group">
           <label for="last-name">Last Name</label>
-          <input type="text" id="last-name" name="last-name" placeholder="Enter your last name">
-          <div class="errorMsg"></div>
+          <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" required>
+          <div class="errorMsg" id="last-name-error"></div>
         </div>
         <div class="form-group">
           <label for="address">Address</label>
-          <input type="text" id="address" name="address" placeholder="Enter your address">
-          <div class="errorMsg"></div>
+          <input type="text" id="address" name="address" placeholder="Enter your address" required>
+          <div class="errorMsg" id="address-error"></div>
         </div>
         <div class="form-group">
           <label for="city">City</label>
-          <input type="text" id="city" name="city" placeholder="Enter your city">
-          <div class="errorMsg"></div>
+          <input type="text" id="city" name="city" placeholder="Enter your city" required>
+          <div class="errorMsg" id="city-error"></div>
         </div>
         <div class="form-group">
           <label for="state">State</label>
-          <input type="text" id="state" name="state" placeholder="Enter your state">
-          <div class="errorMsg"></div>
+          <input type="text" id="state" name="state" placeholder="Enter your state" required>
+          <div class="errorMsg" id="state-error"></div>
         </div>
         <div class="form-group">
           <label for="zip">Zip Code</label>
-          <input type="text" id="zip" name="zip" placeholder="Enter your zip code">
-          <div class="errorMsg"></div>
+          <input type="text" id="zip" name="zip" placeholder="Enter your zip code" required>
+          <div class="errorMsg" id="zip-error"></div>
         </div>
         <div class="form-group">
           <label for="phone">Phone</label>
-          <input type="text" id="phone" placeholder="Enter your phone number">
-          <div class="errorMsg"></div>
+          <input type="text" id="phone" name="phone" placeholder="Enter your phone number" required>
+          <div class="errorMsg" id="phone-error"></div>
         </div>
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="text" id="email" name="email" placeholder="Enter your email">
-          <div class="errorMsg"></div>
+          <input type="text" id="email" name="email" placeholder="Enter your email" required>
+          <div class="errorMsg" id="email-error"></div>
         </div>
         <h3 class="small-title">How did you find this website?</h3>
         <div class="checkbox-group">
@@ -175,19 +175,24 @@ Reflection (1-2 paragraphs):
           <label><input type="checkbox" name="find-page" value="instagram"> Instagram</label>
           <label><input type="checkbox" name="find-page" value="tiktok"> TikTok</label>
           <label><input type="checkbox" name="find-page" value="twitch"> Twitch</label>
+          <div class="errorMsg" id="newspaper-error"></div>
         </div>
     
         <div class="form-group">
           <label for="comment">Comments</label>
-          <textarea id="comment" rows="2" placeholder="Enter your comments here"></textarea>
+          <textarea id="comment" name="comment" rows="2" placeholder="Enter your comments here"></textarea>
         </div>
     
         <button type="submit" class="submit-btn">Send</button>
       </form>
     </div>
     
+    
   </div>
   <script src="js/main.js"></script>
+  <script src="js/page.js"></script>
+  <script src="js/validation.js"></script>
+  
 
 </body>
 </html>
